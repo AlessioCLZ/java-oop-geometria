@@ -19,8 +19,8 @@ public class Main {
 	public static void main(String[] args) 
 	{
 		Scanner keyboard = new Scanner(System.in);
-		Rectangle rec = new Rectangle();
-		Rectangle ret = new Rectangle();
+		Rectangle biggestRec = new Rectangle();
+		Rectangle userRec = new Rectangle();
 		int higherArea=0;
 		
 		/*
@@ -31,22 +31,22 @@ public class Main {
 		{
 			
 			System.out.println("Please insert the rectangle width: ");
-			ret.width = Integer.parseInt(keyboard.nextLine()); // invece di scrivere keyboard.nextInt()
+			userRec.width = Integer.parseInt(keyboard.nextLine()); // invece di scrivere keyboard.nextInt()
 			
 			System.out.println("Please insert the rectangle height: ");
-			ret.height = Integer.parseInt(keyboard.nextLine());
+			userRec.height = Integer.parseInt(keyboard.nextLine());
 			
-			if(ret.getArea()>=higherArea) //se l'area immessa dall'utente è più grande di quella salvata nella ram
+			if(userRec.getArea()>=higherArea) //se l'area immessa dall'utente è più grande di quella salvata nella ram
 				{
-					higherArea=ret.getArea(); //l'area in ram è
-					rec.height=ret.height; 
-					rec.width=ret.width;
+					higherArea=userRec.getArea(); //l'area in ram è
+					biggestRec.height=userRec.height; 
+					biggestRec.width=userRec.width;
 				}
 			
 			
 			
 		}
-		System.out.println(rec.toString()+ " Questo è il più grande.");
+		System.out.println(biggestRec.toString()+ " Questo è il più grande.");
 		keyboard.close();
 		
 	}
